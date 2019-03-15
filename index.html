@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+
+      #map {
+        height: 100%;
+		width: 100%;		
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>      
+
+		
+      function initMap() {
+	      //Initializing location markers.
+		var region1 = {lat: 25.9659055, lng: -80.1303598};
+		var region2 = {lat: 47.9895567, lng: -122.2014362};
+		var region3 = {lat: 37.5388199, lng: -77.4341725};
+		var region4 = {lat: 33.7877769, lng: -117.8537926};
+		var region5 = {lat: 32.7768572, lng: -96.7976385};
+		var region6 = {lat: 38.5792856, lng: -92.1734866};
+		var region7 = {lat: 37.5384387, lng: -77.4335831};
+		var region8 = {lat: 33.4481145, lng: -112.0992206};
+		var region9 = {lat: 28.5376261, lng: -81.3818693};
+		var region10 = {lat: 38.9796249, lng: -76.4937923};
+		var region11 = {lat: 32.7756111, lng: -96.8173492};
+		var region12 = {lat: 33.4488713, lng: -112.1174129};
+		var region13 = {lat: 29.4243229, lng: -98.4966545};
+		var region14 = {lat: 42.7336819, lng: -84.5556406};
+		var region15 = {lat: 39.7687027, lng: -86.1629691};
+		var region16 = {lat: 32.7664174, lng: -117.0228817};
+		var region17 = {lat: 32.7173950, lng: -117.1632182};
+		var region18 = {lat: 33.4487558, lng: -112.06512};
+		var region19 = {lat: 29.7601157, lng: -95.3696658};
+		var region20 = {lat: 43.0402757, lng: -87.9068417};
+		var region21 = {lat: 40.2204038, lng: -74.7704525};
+		var region22 = {lat: 36.1641332, lng: -86.7797715};
+		var region23 = {lat: 32.7859237, lng: -96.7982205};
+		var region24 = {lat: 39.2715189, lng: -76.6217306};
+		var region25 = {lat: 41.9053279, lng: -87.9234644};
+		var region26 = {lat: 37.7793443, lng: -122.4193587};
+		var region27 = {lat: 29.9992322, lng: -90.1849182};
+		var region28 = {lat: 35.2212933, lng: -80.8396256};
+		var region29 = {lat: 33.9806771, lng: -117.3770456};
+		var region30 = {lat: 38.5765640, lng: -121.4932438};
+		var region31 = {lat: 32.7587131, lng: -97.3338448};
+		var region32 = {lat: 33.4946393, lng: -117.1475263};
+		var region33 = {lat: 39.9248707, lng: -75.115279};
+		var region34 = {lat: 45.4857129, lng: -122.6493481};
+		var region35 = {lat: 33.4068362, lng: -112.0994018};
+		var region36 = {lat: 42.7336724, lng: -84.5529632};
+		var region37 = {lat: 42.6855475, lng: -84.5469749};
+		var region38 = {lat: 32.8412916, lng: -117.2684578};
+		var region39 = {lat: 38.0167782, lng: -121.8156218};
+		var region40 = {lat: 32.7541661, lng: -97.3269877};
+		var region41 = {lat: 42.5803882, lng:-83.0305125};
+		var region42 = {lat: 29.8073828, lng: -95.4361558};
+		var region43 = {lat: 35.7789578, lng: -78.6428691};
+		var region44 = {lat: 32.7333269, lng: -97.3315549};
+		var region45 = {lat: 38.0444306, lng: -84.496112};
+		var region46 = {lat: 30.2647733, lng: -97.7476015};
+		var region47 = {lat: 39.7416154, lng: -105.011376};
+		var region48 = {lat: 29.9716859, lng: -95.6938684};
+		var region49 = {lat: 29.4241051, lng: -98.4948427};
+		var region50 = {lat: 33.7872840, lng: -117.8506049};
+		var region51 = {lat: 30.2746240, lng: -97.7405913};
+		var region52 = {lat: 32.9697184, lng: -117.0926909};
+		var region53 = {lat: 38.2910504, lng: -122.0349098};
+		var region54 = {lat: 39.2938804, lng: -76.6217253};
+		var region55 = {lat: 32.9127359, lng: -117.1440945};
+		var region56 = {lat: 32.7173442, lng: -117.1629572};
+		var region57 = {lat: 29.7638651, lng: -95.3356139};
+		var region58 = {lat: 28.5374711, lng: -81.3796794};
+	      
+	      //Initializing map object with center and zoom.
+       		var map = new google.maps.Map(document.getElementById('map'), {center: region5, zoom: 6});	
+	      
+	      //Block with markers and infoWindow
+		var Abdulreda = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Abdulreda/ Dave Abed</h1>'+'<div id="bodyContent">'+ '<p><b>SouthEast Of Florida (The Three Counties): Maimi-Dade, Broward and Palm  Beach,FL</b></p>'+'<p><b>Phone: </b>561-740-4460</p>'+ '<p><b>Email: </b>DaveAbed@TheKeysRus.com</p>'+'</div>'+'</div>';
+		var Abdulredamarker = new google.maps.Marker({position: region1, map: map});
+		var AdnanALtayyar = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Adnan ALtayyar</h1>'+'<div id="bodyContent">'+ '<p><b>From north Everett to south Kent,WA</b></p>'+'<p><b>Phone: </b>206-765-0987</p>'+ '<p><b>Email: </b>adnanaltayyar@yahoo.com</p>'+'</div>'+'</div>';
+		var AdnanALtayyarmarker = new google.maps.Marker({position: region2, map: map});
+		var AhmedMakkiyah = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Ahmed Makkiyah</h1>'+'<div id="bodyContent">'+ '<p><b>Virginia,VA</b></p>'+'<p><b>Phone: </b>734-383-6945</p>'+ '<p><b>Email: </b>blank</p>'+'</div>'+'</div>';
+		var AhmedMakkiyahmarker = new google.maps.Marker({position: region3, map: map});
+		var AdamHammodat = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Adam Hammodat</h1>'+'<div id="bodyContent">'+ '<p><b>Orange County,Los Angeles,Riverside,CA</b></p>'+'<p><b>Phone: </b>714-869-5461</p>'+ '<p><b>Email: </b>Adam1@kw.com</p>'+'</div>'+'</div>';
+		var AdamHammodatmarker = new google.maps.Marker({position: region4, map: map});
+		var AlIbrahim = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Al Ibrahim</h1>'+'<div id="bodyContent">'+ '<p><b>Dallas / Fort Worth- TX,TX</b></p>'+'<p><b>Phone: </b>469-626-2515‬</p>'+ '<p><b>Email: </b>al.ibrahim@remax.net</p>'+'</div>'+'</div>';
+		var AlIbrahimmarker = new google.maps.Marker({position: region5, map: map});
+		var AlaaHussain = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Alaa Hussain</h1>'+'<div id="bodyContent">'+ '<p><b>Missouri,MO</b></p>'+'<p><b>Phone: </b>314-484-9860</p>'+ '<p><b>Email: </b>Alaarealtyusa@yahoo.com</p>'+'</div>'+'</div>';
+		var AlaaHussainmarker = new google.maps.Marker({position: region6, map: map});
+		var AliAhmed = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Ali Ahmed</h1>'+'<div id="bodyContent">'+ '<p><b>Verginia & DC,VA</b></p>'+'<p><b>Phone: </b>202-309-4011</p>'+ '<p><b>Email: </b>aliahmed@weichert.com</p>'+'</div>'+'</div>';
+		var AliAhmedmarker = new google.maps.Marker({position: region7, map: map});
+		var AliAlasady = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Ali Al-asady</h1>'+'<div id="bodyContent">'+ '<p><b>Arizona,AZ</b></p>'+'<p><b>Phone: </b>623-332-4116</p>'+ '<p><b>Email: </b>blank</p>'+'</div>'+'</div>';
+		var AliAlasadymarker = new google.maps.Marker({position: region8, map: map});
+		var AliRamah = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Ali Ramah</h1>'+'<div id="bodyContent">'+ '<p><b>Central Florida Area And Tampa,FL</b></p>'+'<p><b>Phone: </b>443-691-3528</p>'+ '<p><b>Email: </b>RealtorAliS@gmail.com</p>'+'</div>'+'</div>';
+		var AliRamahmarker = new google.maps.Marker({position: region9, map: map});
+		var AmaalSami = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Amaal Sami</h1>'+'<div id="bodyContent">'+ '<p><b>Verginia & Maryland,VA</b></p>'+'<p><b>Phone: </b>240-461-1240</p>'+ '<p><b>Email: </b>amaalsami@kw.com</p>'+'</div>'+'</div>';
+		var AmaalSamimarker = new google.maps.Marker({position: region10, map: map});
+		var AnaheedMahdi = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Anaheed (Ana) Mahdi</h1>'+'<div id="bodyContent">'+ '<p><b>Dallas / Fort Worth and surrounding areas,TX</b></p>'+'<p><b>Phone: </b>469-751-7533</p>'+ '<p><b>Email: </b>ana.re.agent@gmail.com</p>'+'</div>'+'</div>';
+		var AnaheedMahdimarker = new google.maps.Marker({position: region11, map: map});
+		var ArtineTokmajian = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Artine Tokmajian</h1>'+'<div id="bodyContent">'+ '<p><b>Arizona,AZ</b></p>'+'<p><b>Phone: </b>480-352-2487</p>'+ '<p><b>Email: </b>Artinean1975811@yahoo.com</p>'+'</div>'+'</div>';
+		var ArtineTokmajianmarker = new google.maps.Marker({position: region12, map: map});
+		var AsmaaIbrahim = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Asmaa Ibrahim</h1>'+'<div id="bodyContent">'+ '<p><b>San antonio Tx,TX</b></p>'+'<p><b>Phone: </b>605-381-0674</p>'+ '<p><b>Email: </b>asmaakhalel84@yahoo.com</p>'+'</div>'+'</div>';
+		var AsmaaIbrahimmarker = new google.maps.Marker({position: region13, map: map});
+		var AyadSubhi = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Ayad Subhi</h1>'+'<div id="bodyContent">'+ '<p><b>Michigan,MI</b></p>'+'<p><b>Phone: </b>989-493-6670</p>'+ '<p><b>Email: </b>blank</p>'+'</div>'+'</div>';
+		var AyadSubhimarker = new google.maps.Marker({position: region14, map: map});
+		var BasimNajeeb = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Basim Najeeb</h1>'+'<div id="bodyContent">'+ '<p><b>Indianapolis IN,IN</b></p>'+'<p><b>Phone: </b>317-657-2442</p>'+ '<p><b>Email: </b>basimalw@yahoo.com</p>'+'</div>'+'</div>';
+		var BasimNajeebmarker = new google.maps.Marker({position: region15, map: map});
+		var BodourRamatula = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Bodour Ramatula</h1>'+'<div id="bodyContent">'+ '<p><b>Lajolla , La mesa -San Diego,CA</b></p>'+'<p><b>Phone: </b>858-500-2485</p>'+ '<p><b>Email: </b>neumanbodour@gmail.com</p>'+'</div>'+'</div>';
+		var BodourRamatulamarker = new google.maps.Marker({position: region16, map: map});
+		var DaliaHirmez = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Dalia Hirmez</h1>'+'<div id="bodyContent">'+ '<p><b>San Diego and Riverside County,CA</b></p>'+'<p><b>Phone: </b>619-250-9005</p>'+ '<p><b>Email: </b>daliarealtor@gmail.com</p>'+'</div>'+'</div>';
+		var DaliaHirmezmarker = new google.maps.Marker({position: region17, map: map});
+		var FirasAlShamari = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Firas Al Shamari</h1>'+'<div id="bodyContent">'+ '<p><b>Arizona,AZ</b></p>'+'<p><b>Phone: </b>602-314-0344</p>'+ '<p><b>Email: </b>al-shamari@att.net</p>'+'</div>'+'</div>';
+		var FirasAlShamarimarker = new google.maps.Marker({position: region18, map: map});
+		var GadaAlzubaidi = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Gada Alzubaidi</h1>'+'<div id="bodyContent">'+ '<p><b>Houston TX and surrounding areas,TX</b></p>'+'<p><b>Phone: </b>832-660-2881</p>'+ '<p><b>Email: </b>gadawp@gmail.com</p>'+'</div>'+'</div>';
+		var GadaAlzubaidimarker = new google.maps.Marker({position: region19, map: map});
+		var GhadaShakir = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Ghada Shakir</h1>'+'<div id="bodyContent">'+ '<p><b>Metro Milwaukee Area, North Shore,WI</b></p>'+'<p><b>Phone: </b>262-408-9006</p>'+ '<p><b>Email: </b>gshakir@shorewest.com</p>'+'</div>'+'</div>';
+		var GhadaShakirmarker = new google.maps.Marker({position: region20, map: map});
+		var HusseinAlBayati = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Hussein Al-Bayati</h1>'+'<div id="bodyContent">'+ '<p><b>Wisconsin,</b></p>'+'<p><b>Phone: </b>201-962-6295</p>'+ '<p><b>Email: </b>husseinh2004@gmail.com</p>'+'</div>'+'</div>';
+		var HusseinAlBayatimarker = new google.maps.Marker({position: region21, map: map});
+		var HusseinAlnuaimi = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Hussein Alnuaimi</h1>'+'<div id="bodyContent">'+ '<p><b>Nashville, TN,TN</b></p>'+'<p><b>Phone: </b>615-753-9958</p>'+ '<p><b>Email: </b>husseinalnuaimi.nexthome@gmail.com</p>'+'</div>'+'</div>';
+		var HusseinAlnuaimimarker = new google.maps.Marker({position: region22, map: map});
+		var IbraheemAziez = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Ibraheem Aziez</h1>'+'<div id="bodyContent">'+ '<p><b>Dallas , Fort worth Metroplex,TX</b></p>'+'<p><b>Phone: </b>469-952-8792</p>'+ '<p><b>Email: </b>ibrahimAtC21@gmail.com</p>'+'</div>'+'</div>';
+		var IbraheemAziezmarker = new google.maps.Marker({position: region23, map: map});
+		var IbteesamAlslimawy = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Ibteesam Al slimawy</h1>'+'<div id="bodyContent">'+ '<p><b>Virginia, Maryland & DC,VA</b></p>'+'<p><b>Phone: </b>571-225-5652</p>'+ '<p><b>Email: </b>Ibteesam.a@gmail.com</p>'+'</div>'+'</div>';
+		var IbteesamAlslimawymarker = new google.maps.Marker({position: region24, map: map});
+		var KasimAlnafoosi = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Kasim Alnafoosi</h1>'+'<div id="bodyContent">'+ '<p><b>Chicago Illinois suburbs/Wisconsin,IL</b></p>'+'<p><b>Phone: </b>847-809-7215</p>'+ '<p><b>Email: </b>layth.jpg</p>'+'</div>'+'</div>';
+		var KasimAlnafoosimarker = new google.maps.Marker({position: region25, map: map});
+		var LuayIssa = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Luay Issa</h1>'+'<div id="bodyContent">'+ '<p><b>San Fransisco CA.,CA</b></p>'+'<p><b>Phone: </b>925-395-1915</p>'+ '<p><b>Email: </b>blank</p>'+'</div>'+'</div>';
+		var LuayIssamarker = new google.maps.Marker({position: region26, map: map});
+		var LydiaChunn = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Lydia Chunn</h1>'+'<div id="bodyContent">'+ '<p><b>Metairie, Slidell, Kenner, Covington,LA</b></p>'+'<p><b>Phone: </b>504-722-8585</p>'+ '<p><b>Email: </b>Lydiachunn@gmail.com</p>'+'</div>'+'</div>';
+		var LydiaChunnmarker = new google.maps.Marker({position: region27, map: map});
+		var LaythDuroobi = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Layth Duroobi</h1>'+'<div id="bodyContent">'+ '<p><b>Charlotte,NC</b></p>'+'<p><b>Phone: </b>704-890-1975</p>'+ '<p><b>Email: </b>layth.d@gmail.com</p>'+'</div>'+'</div>';
+		var LaythDuroobimarker = new google.maps.Marker({position: region28, map: map});
+		var MajidAlbassam = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Majid Albassam</h1>'+'<div id="bodyContent">'+ '<p><b>Los Angeles & Riverside,CA</b></p>'+'<p><b>Phone: </b>909-203-0406</p>'+ '<p><b>Email: </b>malbassam@kw.com</p>'+'</div>'+'</div>';
+		var MajidAlbassammarker = new google.maps.Marker({position: region29, map: map});
+		var MikeAqrawi = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Mike Aqrawi</h1>'+'<div id="bodyContent">'+ '<p><b>California,CA</b></p>'+'<p><b>Phone: </b>619-961-9909</p>'+ '<p><b>Email: </b>blank</p>'+'</div>'+'</div>';
+		var MikeAqrawimarker = new google.maps.Marker({position: region30, map: map});
+		var MohammedKadhim = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Mohammed Kadhim</h1>'+'<div id="bodyContent">'+ '<p><b>Dallas - Fort Worth,TX</b></p>'+'<p><b>Phone: </b>346-331-8824</p>'+ '<p><b>Email: </b>mkadhim.realtor@gmail.com</p>'+'</div>'+'</div>';
+		var MohammedKadhimmarker = new google.maps.Marker({position: region31, map: map});
+		var MohammadShallal = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Mohammad Shallal</h1>'+'<div id="bodyContent">'+ '<p><b>San Diego, Temecula, Lake Elsinore and Corona,CA</b></p>'+'<p><b>Phone: </b>858-335-5142</p>'+ '<p><b>Email: </b>shallalrealty@gmail.com</p>'+'</div>'+'</div>';
+		var MohammadShallalmarker = new google.maps.Marker({position: region32, map: map});
+		var MoustafaAldouri = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Moustafa Aldouri</h1>'+'<div id="bodyContent">'+ '<p><b>South & Central Jersy,NJ</b></p>'+'<p><b>Phone: </b>‭856-316-6406‬</p>'+ '<p><b>Email: </b>Maldourirealestate@gmail.com</p>'+'</div>'+'</div>';
+		var MoustafaAldourimarker = new google.maps.Marker({position: region33, map: map});
+		var MuroojAlshawy = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Murooj Alshawy</h1>'+'<div id="bodyContent">'+ '<p><b>Portland Oregon,OR</b></p>'+'<p><b>Phone: </b>503-866-2803</p>'+ '<p><b>Email: </b>m.alshawy@kw.com</p>'+'</div>'+'</div>';
+		var MuroojAlshawymarker = new google.maps.Marker({position: region34, map: map});
+		var NadiaMohammed = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Nadia Mohammed</h1>'+'<div id="bodyContent">'+ '<p><b>Arizona,AZ</b></p>'+'<p><b>Phone: </b>480-599-9183</p>'+ '<p><b>Email: </b>nadia1978h@gmail.com</p>'+'</div>'+'</div>';
+		var NadiaMohammedmarker = new google.maps.Marker({position: region35, map: map});
+		var Narmeenc = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Narmeen c</h1>'+'<div id="bodyContent">'+ '<p><b>Michigan,MI</b></p>'+'<p><b>Phone: </b>517-862-1964</p>'+ '<p><b>Email: </b>narmeenshango@kw.com</p>'+'</div>'+'</div>';
+		var Narmeencmarker = new google.maps.Marker({position: region36, map: map});
+		var NawalMohammed = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Nawal Mohammed</h1>'+'<div id="bodyContent">'+ '<p><b>Arizona,Ar</b></p>'+'<p><b>Phone: </b>602-488-9554</p>'+ '<p><b>Email: </b>nawalmo19@gmail.com</p>'+'</div>'+'</div>';
+		var NawalMohammedmarker = new google.maps.Marker({position: region37, map: map});
+		var NeumanRamatula = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Neuman Ramatula</h1>'+'<div id="bodyContent">'+ '<p><b>Lajolla , La mesa -San Diego,CA</b></p>'+'<p><b>Phone: </b>858-500-2228</p>'+ '<p><b>Email: </b>neumanbodour@gmail.com</p>'+'</div>'+'</div>';
+		var NeumanRamatulamarker = new google.maps.Marker({position: region38, map: map});
+		var OmarAlnuaimi = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Omar Alnuaimi</h1>'+'<div id="bodyContent">'+ '<p><b>Nashville. Antioch. Smyrna. Murfreesboro LaVergen TN,TN</b></p>'+'<p><b>Phone: </b>615-474-2446</p>'+ '<p><b>Email: </b>blank</p>'+'</div>'+'</div>';
+		var OmarAlnuaimimarker = new google.maps.Marker({position: region39, map: map});
+		var OmarAltememe = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Omar Altememe</h1>'+'<div id="bodyContent">'+ '<p><b>Dallas/ Fort Worth -TX,TX</b></p>'+'<p><b>Phone: </b>214-859-0335</p>'+ '<p><b>Email: </b>Omar.al@remax.net</p>'+'</div>'+'</div>';
+		var OmarAltemememarker = new google.maps.Marker({position: region40, map: map});
+		var OsamaHasan = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Osama Hasan</h1>'+'<div id="bodyContent">'+ '<p><b>Dearborn sterling heigths,MI</b></p>'+'<p><b>Phone: </b>586-909-3102</p>'+ '<p><b>Email: </b>sam.hasan@kw.com</p>'+'</div>'+'</div>';
+		var OsamaHasanmarker = new google.maps.Marker({position: region41, map: map});
+		var QusayAbdulrazzaq = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Qusay Abdulrazzaq</h1>'+'<div id="bodyContent">'+ '<p><b>Greater Houston Area,TX</b></p>'+'<p><b>Phone: </b>713-391-7063</p>'+ '<p><b>Email: </b>Qussay.abdulrazzaq@kw.com</p>'+'</div>'+'</div>';
+		var QusayAbdulrazzaqmarker = new google.maps.Marker({position: region42, map: map});
+		var RaaedAlhadad = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Raaed Alhadad</h1>'+'<div id="bodyContent">'+ '<p><b>Raligh NC,NC</b></p>'+'<p><b>Phone: </b>919-931-7475</p>'+ '<p><b>Email: </b>rod@bestinvestmentrealty.com</p>'+'</div>'+'</div>';
+		var RaaedAlhadadmarker = new google.maps.Marker({position: region43, map: map});
+		var RaedAlsabah = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Raed Alsabah</h1>'+'<div id="bodyContent">'+ '<p><b>DFW,TX</b></p>'+'<p><b>Phone: </b>469-406-4792</p>'+ '<p><b>Email: </b>raed@kw.com</p>'+'</div>'+'</div>';
+		var RaedAlsabahmarker = new google.maps.Marker({position: region44, map: map});
+		var RandMahmwd = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Rand Mahmwd</h1>'+'<div id="bodyContent">'+ '<p><b>Lexinton,KY</b></p>'+'<p><b>Phone: </b>502-319-2204</p>'+ '<p><b>Email: </b>Rand.realtor@gmail.com</p>'+'</div>'+'</div>';
+		var RandMahmwdmarker = new google.maps.Marker({position: region45, map: map});
+		var ReemAdam = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Reem Adam</h1>'+'<div id="bodyContent">'+ '<p><b>,TX</b></p>'+'<p><b>Phone: </b>512-537-2201</p>'+ '<p><b>Email: </b>reemadam.realtor@gmail.com</p>'+'</div>'+'</div>';
+		var ReemAdammarker = new google.maps.Marker({position: region46, map: map});
+		var Reemjalili = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Reem jalili</h1>'+'<div id="bodyContent">'+ '<p><b>Denver, Aurora, Greenvalley ranch, Greenwood Village, Parker, Highlands Ranch,Co</b></p>'+'<p><b>Phone: </b>720-447-7377</p>'+ '<p><b>Email: </b>jalilireem@gmail.com</p>'+'</div>'+'</div>';
+		var Reemjalilimarker = new google.maps.Marker({position: region47, map: map});
+		var SajaMahdi = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Saja Mahdi</h1>'+'<div id="bodyContent">'+ '<p><b>Houston and surroundings ; Katy, Cypress, Sugarland, pearland, ...etc.,TX</b></p>'+'<p><b>Phone: </b>713-898-3427</p>'+ '<p><b>Email: </b>Saja@westsidehoustonhomes.com</p>'+'</div>'+'</div>';
+		var SajaMahdimarker = new google.maps.Marker({position: region48, map: map});
+		var SamBarazWisam = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Sam Baraz (Wisam)</h1>'+'<div id="bodyContent">'+ '<p><b>San Antonio TX,TX</b></p>'+'<p><b>Phone: </b>210-899-9186</p>'+ '<p><b>Email: </b>sbaraz.baraz@gmail.com</p>'+'</div>'+'</div>';
+		var SamBarazWisammarker = new google.maps.Marker({position: region49, map: map});
+		var SarmadJalal = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">sarmad (sam) Jalal</h1>'+'<div id="bodyContent">'+ '<p><b>Orang county California,CA</b></p>'+'<p><b>Phone: </b>949-606-5646</p>'+ '<p><b>Email: </b>Jsarmad@yahoo.com</p>'+'</div>'+'</div>';
+		var SarmadJalalmarker = new google.maps.Marker({position: region50, map: map});
+		var WahabSalihi = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Wahab Salihi</h1>'+'<div id="bodyContent">'+ '<p><b>Austin, TX and surroundings,TX</b></p>'+'<p><b>Phone: </b>512-576-8175</p>'+ '<p><b>Email: </b>wahabsalihi@gmail.com</p>'+'</div>'+'</div>';
+		var WahabSalihimarker = new google.maps.Marker({position: region51, map: map});
+		var WisamMohsin = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Wisam Mohsin</h1>'+'<div id="bodyContent">'+ '<p><b>San Diego County , California,CA</b></p>'+'<p><b>Phone: </b>619-438-9291</p>'+ '<p><b>Email: </b>Wmohsin@century21award.com</p>'+'</div>'+'</div>';
+		var WisamMohsinmarker = new google.maps.Marker({position: region52, map: map});
+		var YaserFaily = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Yaser Faily</h1>'+'<div id="bodyContent">'+ '<p><b>Solano County /YOLO County/Sacramento County/Placer County,CA</b></p>'+'<p><b>Phone: </b>530-867-3463</p>'+ '<p><b>Email: </b>Yfaily@c21mm.com</p>'+'</div>'+'</div>';
+		var YaserFailymarker = new google.maps.Marker({position: region53, map: map});
+		var YusurAlmukhtar = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Yusur Almukhtar</h1>'+'<div id="bodyContent">'+ '<p><b>Virginia and Maryland,VA,MD</b></p>'+'<p><b>Phone: </b>412-880-9738</p>'+ '<p><b>Email: </b>yusur1979@gmail.com</p>'+'</div>'+'</div>';
+		var YusurAlmukhtarmarker = new google.maps.Marker({position: region54, map: map});
+		var ZainabAlmaliky = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">zainab (Zee) Almaliky</h1>'+'<div id="bodyContent">'+ '<p><b>,VA</b></p>'+'<p><b>Phone: </b>571-212-9670</p>'+ '<p><b>Email: </b>blank</p>'+'</div>'+'</div>';
+		var ZainabAlmalikymarker = new google.maps.Marker({position: region55, map: map});
+		var ZinahAlSaffar = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Zinah Al Saffar</h1>'+'<div id="bodyContent">'+ '<p><b>San Diego,CA</b></p>'+'<p><b>Phone: </b>619-792-7152</p>'+ '<p><b>Email: </b>Zinah.saffar@gmail.com</p>'+'</div>'+'</div>';
+		var ZinahAlSaffarmarker = new google.maps.Marker({position: region56, map: map});
+		var ZiadAlkayali = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Ziad Al kayali</h1>'+'<div id="bodyContent">'+ '<p><b>Houston,TX</b></p>'+'<p><b>Phone: </b>832-661-7270</p>'+ '<p><b>Email: </b>ziad.alkayali@kw.com</p>'+'</div>'+'</div>';
+		var ZiadAlkayalimarker = new google.maps.Marker({position: region57, map: map});
+		var ZaidAlRamadhani = "<div style='float:left'><img src=''></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Zaid Al Ramadhani</h1>'+'<div id="bodyContent">'+ '<p><b>Tampa and Orlando,FL</b></p>'+'<p><b>Phone: </b>407-484-9197</p>'+ '<p><b>Email: </b>blank</p>'+'</div>'+'</div>';
+		var ZaidAlRamadhanimarker = new google.maps.Marker({position: region58, map: map});
+		
+	      	//Cick listener
+		AlSalihiMarker.addListener('click', function() {AlSalihiWindow.open(map, AlSalihiMarker);});	  
+	  
+	
+    }	  
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/
+		js?key=AIzaSyCxRNvKWOV4Ik8FmscvSDM3DwNl7vYA4qE&callback=initMap"></script>
+  </body>
+</html>
