@@ -8,7 +8,7 @@
 
       #map {
         height: 100%;
-		width: 100%;		
+	width: 100%;		
       }
       /* Optional: Makes the sample page fill the window. */
       html, body {
@@ -114,7 +114,7 @@
 		var AlIbrahimmarker = new google.maps.Marker({position: region5, map: map});
 		google.maps.event.addListener(AlIbrahimmarker, 'click', function() {map.panTo(this.getPosition());map.setZoom(9);});
 		AlIbrahimmarker.addListener('click', function() {AlIbrahimInfoWindow.open(map, AlIbrahimmarker);});
-		var AlaaHussainContentString = "<div style='float:left'><img src='https://i.imgur.com/d1xpUuu.png' width = '300', height= '265'></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Alaa Hussain</h1>'+'<div id="bodyContent">'+ '<p><b>Missouri,MO</b></p>'+'<p><font color = "green">Phone: </font>314-484-9860</p>'+ '<p><font color = "green">Email: </font>Alaarealtyusa@yahoo.com</p>'+'</div>'+'</div>';
+		var AlaaHussainContentString = "<div style='float:left'><img src='https://i.imgur.com/EZ4bnP5.jpg' width = '300', height= '265'></div><div style='float:right; padding: 10px;'></div>"+'<h1 id="firstHeading" class="firstHeading">Alaa Hussain</h1>'+'<div id="bodyContent">'+ '<p><b>Missouri,MO</b></p>'+'<p><font color = "green">Phone: </font>314-484-9860</p>'+ '<p><font color = "green">Email: </font>Alaarealtyusa@yahoo.com</p>'+'</div>'+'</div>';
 		var AlaaHussainInfoWindow = new google.maps.InfoWindow({content: AlaaHussainContentString});
 		var AlaaHussainmarker = new google.maps.Marker({position: region6, map: map});
 		google.maps.event.addListener(AlaaHussainmarker, 'click', function() {map.panTo(this.getPosition());map.setZoom(9);});
